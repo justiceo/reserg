@@ -19,7 +19,8 @@
   </head>
 
   <body>
-
+    
+    <header>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -29,13 +30,13 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="<?php echo site_url(); ?>"><strong><?php bloginfo('name'); ?></strong><span class="separator">|</span><span class="tagline"><small><em><?php bloginfo_rss('description')?></em></small></span></a>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-                <?php wp_list_pages(array('title_li' => '', 'exclude' => 5 )); ?>
-            </ul>
+          <div class="nav-collapse collapse">       
+                <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav pull-right' ) ); ?>
           </div> <!--/.nav-collapse-->
         </div>
       </div>
     </div>
+
+        </header>
 
     <div class="container">

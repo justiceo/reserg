@@ -22,8 +22,19 @@ body {
 
 body {
     font-family: Trebuchet MS, helvetica, arial, sans-serif;
+    background: url('bg.jpg') fixed;
+
 }
 
 .navbar-inner .container {
     padding: 20px 0px;
+}
+
+.footer-menu {
+    float: right;
+}
+
+.footer-menu li {
+    float:left;
+    margin: 0 8px;
 }
