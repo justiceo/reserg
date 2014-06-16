@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>SERG | Software Engineering Research Group</title>
+    <title><?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le styles -->
@@ -31,7 +31,7 @@
           <a class="brand" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-                <?php wp_list_pages(array('title_li' => '', 'exclude' => 4 )); ?>
+                <?php wp_list_pages(array('title_li' => '', 'exclude' => 5 )); ?>
             </ul>
           </div> <!--/.nav-collapse-->
         </div>
