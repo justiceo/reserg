@@ -1,5 +1,4 @@
 
-
 /*
 Theme Name: RESERG
 Theme URI: http://github.com/justiceo/reserg
@@ -17,6 +16,14 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 @import url('bootstrap/css/bootstrap.css');
 @import url('bootstrap/css/bootstrap-responsive.css');
 body {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 40px;
+}
+
+body {
+    font-family: Trebuchet MS, helvetica, arial, sans-serif;
+}
+
+.navbar-inner .container {
+    padding: 20px 0px;
 }
