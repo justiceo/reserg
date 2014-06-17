@@ -2,8 +2,8 @@
 
 <div class="banner">
     <div class="container">
-    <div class="row">
-        <div class="col-md-12 keep_bottom">
+    <div class="row bottom_outside">
+        <div class="col-md-12 bottom_inside">
             <h1><?php the_title_rss() ?></h1>
         </div>
     </div>

@@ -3,25 +3,31 @@
 
 
 <div class="row">
-    <div class="span12 category-listing">
-
+    
+       
         <?php if ( have_posts() ) : ?>
 		  <?php while ( have_posts() ) : ?>
-			<?php the_post(); ?>        
-            <article>
-                <?php echo get_the_post_thumbnail(); ?>
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <p><em><?php the_time('l, F jS, Y'); ?></em></p>                
-                <p><?php the_excerpt_rss(); ?></p>
+			<?php the_post(); ?>  
+                 
+            <article class="article-post<?php if(!((1 + $wp_query->current_post) % 2)) echo ' article-post-right' ?>">
+                <a class="cat-post" href="<?php the_permalink(); ?>">
+                <div class="bottom_outside">
+                    <?php echo get_the_post_thumbnail(); ?>
+                    <div class="bottom_inside">
+                        <h2><?php the_title_rss(); ?></h2>
+                    </div>
+                </div>
+                </a>
             </article>
+                 
             
           
 		  <?php endwhile; else: ?>
           <p><?php _e('Sorry, there are no posts'); ?></p>
         <?php endif; ?>
 
-
-    </div>
+        
+    
 </div>
 
 <?php get_footer(); ?>

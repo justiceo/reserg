@@ -23,19 +23,25 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
     background-color:  #fff;
 }
 
-.banner .row {
-   position: relative;
-   height:  250px;
+.banner .bottom_inside {    
+        border: 1px solid #ddd;
+        border-bottom: none;
+        padding:  20px 40px;
+        box-sizing: border-box;
 }
 
-.banner .keep_bottom {
+.banner .bottom_outside {    
+    height:  250px;
+}
+
+.bottom_outside {
+    position: relative;
+}
+
+.bottom_inside {
         position: absolute;
         bottom: 0;
         width: 100%;
-        border: 1px solid #ddd;
-        border-bottom: none;
-        border-left-radius:  5px;
-        padding:  20px 0 20px 40px;
 }
 
 body {

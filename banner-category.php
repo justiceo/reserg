@@ -2,8 +2,8 @@
 
 <div class="banner">
     <div class="container">
-    <div class="row">
-        <div class="col-md-12 keep_bottom">
+    <div class="row bottom_outside">
+        <div class="col-md-12 bottom_inside">
             <h1><?php echo single_cat_title('', true); ?></h1>
             <p><?php echo category_description(); ?></p>
         </div>
