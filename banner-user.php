@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-<?php get_template_part("banner"); ?>
 
 <div class="row">
     <div class="span12">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+        <h1><?php the_title_rss(); ?></h1>
         <?php the_content(); ?>
 
         <?php endwhile; else: ?>

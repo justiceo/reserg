@@ -3,17 +3,22 @@
 <div class="row">
     <div class="span8">
         <h1>News</h1>
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <p><?php the_excerpt_rss(); ?></p>
-        <p><em><?php the_time('l, F jS, Y'); ?></em></p>
-        <hr>
-
-        <?php endwhile; else: ?>
-        <p><?php _e('Sorry, there are no posts'); ?></p>
-
-        <?php endif; ?>
+        <?php
+$args = array( 'posts_per_page' => 10, 'order'=> 'ASC', 'orderby' => 'title' );
+$postslist = get_posts( $args );
+foreach ( $postslist as $post ) :
+  setup_postdata( $post ); ?> 
+	<div>
+		<?php the_date(); ?>
+        <?php echo get_the_post_thumbnail(); ?>
+		<br />
+		<?php the_title(); ?>   
+		<?php the_excerpt(); ?>
+	</div>
+<?php
+endforeach; 
+wp_reset_postdata();
+?>
             
     </div>
     <div class="span4">
